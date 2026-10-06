@@ -20,3 +20,7 @@ Suelda, cose uniones en T, quita triángulos rotos, motas y capas internas, cier
 |---|---|
 | 1.0.1 | Si la reparación no basta, rehace el sólido con vóxeles automáticamente; quita trocitos sueltos tras rehacer; detalle automático; los huecos encerrados ya no cuentan como «del revés». |
 | 1.0.0 | Primera versión. |
+
+## Licencia
+
+GPL-3.0-or-later. Gratis para usar, modificar y compartir; si redistribuyes una versión modificada, publica también su código.
