@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Ricardo Lugaresi
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 bl_info = {'name': 'Mesh Doctor', 'author': 'Ricardo Lugaresi', 'version': (1, 0, 2),
            'blender': (4, 2, 0), 'location': 'Vista 3D > N > Mesh Doctor',
            'description': 'Analiza el modelo y lo deja perfecto (cerrado, limpio, sin cruces) para imprimir, partir o separar colores',

@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Ricardo Lugaresi
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 """Mesh Doctor: analizar y dejar la malla perfecta para imprimir o separar colores.
 
 Todo trabaja sobre una copia: el original se oculta y nunca se modifica.
