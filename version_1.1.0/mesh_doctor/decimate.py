@@ -90,10 +90,10 @@ def faces_check(n_faces, nozzle, area, dims, kind='SMOOTH'):
     """Para el análisis: ('ok'|'warn', texto)."""
     lo, hi, size, _side = face_target(nozzle, area, dims, kind)
     nz = str(nozzle_key(nozzle)).replace('.', ',')
-    if n_faces > hi * 1.25:
-        return 'warn', (f'Malla sobredimensionada: para boquilla {nz} y tamaño {size} bastan '
+    if n_faces > hi:
+        return 'warn', (f'Malla sobredimensionada: para boquilla {nz} y una pieza {size} bastan '
                         f'{fmt_k(lo)}–{fmt_k(hi)} caras. Usa «Diezmar inteligente».')
-    return 'ok', f'bien para boquilla {nz} y tamaño {size} ({fmt_k(lo)}–{fmt_k(hi)})'
+    return 'ok', f'bien para boquilla {nz} y una pieza {size} ({fmt_k(lo)}–{fmt_k(hi)})'
 
 
 # --------------------------------------------------------------------------- desviación
@@ -215,8 +215,8 @@ def smart_decimate(context, obj, nozzle=0.4, kind='SMOOTH', unit='AUTO', progres
             'size': size, 'side_mm': side, 'area_mm2': area, 'dims': dims.tolist(), 'target': (lo, hi),
             'steps': [], 'notes': [], 'unit': code}
     if n0 <= floor * 1.05:
-        info['notes'].append(f'Ya está bien: {fmt_k(n0)} caras para boquilla {str(nz).replace(".", ",")} y tamaño '
-                             f'{size} ({fmt_k(lo)}–{fmt_k(hi)}). No hace falta diezmar.')
+        info['notes'].append(f'Ya está bien: {fmt_k(n0)} caras para boquilla {str(nz).replace(".", ",")} y una '
+                             f'pieza {size} ({fmt_k(lo)}–{fmt_k(hi)}). No hace falta diezmar.')
         info['seconds'] = time.time() - t0
         return None, info
 
